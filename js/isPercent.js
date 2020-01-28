@@ -8,18 +8,18 @@
 	/**
 	 * @name isPercent
 	 * @since 2017-12-06
-	 * @param {*} value
+	 * @param {string} value
 	 * @return {boolean}
 	 */
 	window.isPercent = function(value) {
 		var result = false;
 
-		//문자이면서 맨 뒷문자가 %일 때
+		//문자이면서 맨 마지막 글자가 퍼센트일 때
 		if(typeof value === 'string' && value.substr(-1) === '%') {
-			value = value.substring(0, value.length - 1);
+			value = value.slice(0, -1);
 			
-			//퍼센트일 때
-			if(value == parseFloat(value, 10)) {
+			//숫자형으로 바꿔서 값이 같을 때
+			if(value == parseFloat(value)) {
 				result = true;
 			}
 		}
