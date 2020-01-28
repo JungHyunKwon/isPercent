@@ -8,7 +8,7 @@
 	/**
 	 * @name isPercent
 	 * @since 2017-12-06
-	 * @param {string} value
+	 * @param {*} value
 	 * @return {boolean}
 	 */
 	window.isPercent = function(value) {
